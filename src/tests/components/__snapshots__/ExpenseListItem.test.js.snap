@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseListItem with correct expense 1`] = `
+<div>
+  <div>
+    <Link
+      replace={false}
+      to="/edit/1"
+    >
+      <h3>
+        Gum
+      </h3>
+    </Link>
+    <p>
+      195
+       - 
+      0
+    </p>
+  </div>
+</div>
+`;
+
+exports[`should render ExpenseListItem with invalid expense 1`] = `
+<div>
+  <p>
+    Expense Error
+  </p>
+</div>
+`;
