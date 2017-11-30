@@ -13,7 +13,7 @@ export default [
         id: '2',
         description: 'Rent',
         note: '',
-        amount: 200000,
+        amount: 109500,
         createdAt: moment(0).subtract(4, 'days').valueOf()
     },
 
@@ -21,7 +21,7 @@ export default [
         id: '3',
         description: 'Credit Card',
         note: '',
-        amount: 45000,
+        amount: 4500,
         createdAt: moment(0).add(4, 'days').valueOf()
     }
 

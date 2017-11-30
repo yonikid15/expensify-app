@@ -30,27 +30,6 @@ export class EditExpensePage extends React.Component {
     }
 };
 
-// const EditExpensePage = (props) => {
-//     return (
-//         <div>
-//             <h1>Edit Expense</h1>
-//             <ExpenseForm 
-//                 expense={props.expense}
-//                 onSubmit={(expense) => {
-//                     props.dispatch(editExpense(props.match.params.id, expense));
-//                     props.history.push('/');
-//                 }}
-//             />
-//             <button 
-//                 onClick={((e) => {
-//                     props.dispatch(removeExpense({id : props.match.params.id}));
-//                     props.history.push('/');
-//                 })}    
-//             >Remove</button>
-//         </div>
-//     );
-// };
-
 const mapStateToProps = (state, props) => {
     return {
         expense: state.expenses.find((expense) => expense.id === props.match.params.id)
