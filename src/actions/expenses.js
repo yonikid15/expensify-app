@@ -23,7 +23,7 @@ export const startAddExpense = (expenseData = {}) => {
 
         const expense = { description, note, amount, createdAt };
         
-    return database.ref('expenses').push(expense).then((ref) => {
+        return database.ref('expenses').push(expense).then((ref) => {
             dispatch(addExpense({
                 id: ref.key,
                 ...expense
@@ -37,6 +37,22 @@ export const removeExpense = ({ id } = {})  => ({
     type: 'REMOVE_EXPENSE',
     id
 });
+
+export const startRemoveExpense = ({ id } = {}) => {
+    return (dispatch) => {
+        return database.ref(`expenses/${id}`).remove().then((ref) => {
+            dispatch(removeExpense({ id }));
+        });
+    };
+};
+
+// database.ref()
+//     .remove()
+//     .then(() => {
+//         console.log('Remove Succeeded.');
+//     }).catch((e) => {
+//         console.log('Remove failed: ' + e)
+//     });
 
 // EDIT_EXPENSE
 export const editExpense = (id, updates) => ({
