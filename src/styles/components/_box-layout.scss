@@ -1,5 +1,5 @@
 .box-layout {
-    background: $light-blue;
+    background: $dark-blue;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -12,11 +12,11 @@
     background-color: fade-out($color: white, $amount: .15);
     border-radius: 3px;
     text-align: center;
-    width: 25rem;
-    padding: $l-size $m-size;
+    width: 30rem;
+    padding: $xl-size $m-size;
 }
 
 .box-layout__title {
-    margin: 0 0 $m-size 0;
+    margin: 0 0 $l-size 0;
     line-height: 1;
 }
